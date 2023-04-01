@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:login_page/main.dart';
+import 'package:login_page/uiPage.dart';
 
 class IntroPage extends StatelessWidget {
   @override
@@ -21,14 +22,27 @@ class IntroPage extends StatelessWidget {
               ),
 
           child: Center(
-            child: ElevatedButton(
-              onPressed: () {
+            child: Column(
+              children: [
+                ElevatedButton(
+                  onPressed: () {
 
-                Navigator.push(context, MaterialPageRoute(builder:(context) => MyHomePage(title: 'Welcome to Valorant'),));
-              },
-              child: const Text('Back'),
+                    Navigator.push(context, MaterialPageRoute(builder:(context) => MyHomePage(title: 'Welcome to Valorant'),));
+                  },
+                  child: const Text('Back'),
 
 
+                ),
+                ElevatedButton(
+                  onPressed: () {
+
+                    Navigator.push(context, MaterialPageRoute(builder:(context) => uiPage(),));
+                  },
+                  child: const Text('Next'),
+
+
+                ),
+              ],
             ),
           ),
           ),
